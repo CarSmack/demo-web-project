@@ -156,5 +156,12 @@ public class WebController {
 
 		return "Testing: 123";
 	}
+	@RequestMapping(value = "/cs480/ping", method = RequestMethod.GET)
+	String healthCheck() {
+		// You can replace this with other string,
+		// and run the application locally to check your changes
+		// with the URL: http://localhost:8080/
+		return "Checking Function: abc";
+	}
 
 }
