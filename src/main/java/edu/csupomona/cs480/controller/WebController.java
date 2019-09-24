@@ -150,5 +150,11 @@ public class WebController {
 	String welcome() {
 		return "Hello World";
 	}
+	
+		@RequestMapping(value = "/cs480/ping", method = RequestMethod.GET)
+	String healthCheck() {
+
+		return "Testing: 123";
+	}
 
 }
