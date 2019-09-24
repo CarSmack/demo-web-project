@@ -47,6 +47,26 @@ public class WebController {
 		return "OK";
 	}
 
+	/** 
+	* Simple http method for a3 part 3
+	* Mateusz Murawski
+	* Gives pi value calculated from Al-Kashi pi method.
+	*/
+	@RequestMapping(value = "/cs480/Matt", method = RequestMethod.GET)
+	Double simplePI() {
+		double csubn = Math.sqrt(3);
+		double asubn;
+		int n;
+		for(n= 1; n<=14; n++){
+			csubn = Math.sqrt(2.0 + csubn);
+		}
+		
+		asubn = Math.sqrt( 4 - Math.pow(csubn, 2.0) );
+					
+		double TwotoPowN = Math.pow(2.0, n);
+		return(asubn*((1.0/2.0)*3.0*TwotoPowN));;
+	}
+	
 	/**
 	 * This is a simple example of how to use a data manager
 	 * to retrieve the data and return it as an HTTP response.
